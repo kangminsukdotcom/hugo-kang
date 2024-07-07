@@ -1,0 +1,7 @@
+name = "Kang"
+license = "MIT"
+
+# Hugo versions the theme supports
+[module]
+  [module.hugoVersion]
+    min = "0.90"

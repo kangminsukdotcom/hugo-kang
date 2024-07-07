@@ -1,0 +1,59 @@
+{{ define "main" }}
+<script src="/pagefind/pagefind-ui.js"></script>
+<content>
+  {{ if .Data.Singular }}
+    <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
+  {{ end }}
+
+<div id="search-results"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var searchResults = document.getElementById('search-results');
+
+      // Initialize PagefindUI
+      new PagefindUI({
+        element: '#search-results',
+        showImages: false,
+        showEmptyFilters: false,
+        resetStyles: false,
+      });
+    });
+  </script>
+
+  <content>
+    {{ if .Data.Singular }}
+      <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
+    {{ end }}
+    <ul class="blog-posts">
+      {{ range .Pages }}
+      <li>
+        <span>
+          <i>
+            <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+              {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
+            </time>
+          </i>
+        </span>
+        {{ if .Params.link }}
+          <a href="{{ .Params.link }}" target="_blank">{{ .Title }} ↪</a>
+        {{ else }}
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+      </li>
+      {{ else }}
+      <li>
+        {{ i18n "no-posts" }}
+      </li>
+      {{ end }}
+    </ul>
+    {{ if not .Data.Singular }}
+      <div>
+        {{ range .Site.Taxonomies.tags }}
+          <a class="blog-tags" href="{{ .Page.RelPermalink }}">#{{ lower .Page.Title }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </content>
+</content>
+{{ end }}

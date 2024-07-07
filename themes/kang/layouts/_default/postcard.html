@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="{{ relURL .Site.Home.Permalink }}" class="title" style="text-align: center;">
+        {{ $titleImage := .Site.Params.titleImage }}
+        <h1>
+          <img src="{{ $titleImage }}" alt="{{ .Site.Title }}" style="height: 50px;">
+        </h1>
+    </a>
+    {{ $styles := resources.Get "style.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+</head>
+<body>
+    <main>
+        {{ .Content }}
+    </main>
+    <script src="/js/postcard.js"></script>
+</body>
+</html>

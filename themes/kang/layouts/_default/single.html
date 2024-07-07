@@ -1,0 +1,25 @@
+{{ define "main" }}
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
+{{ if .Params.robots }}
+  <meta name="robots" content="{{ .Params.robots }}">
+{{ end }}
+{{ if not .Params.menu }}
+<h1 data-pagefind-meta="title">{{ .Title }}</h1>
+{{ end }}
+<main data-pagefind-body>
+<content>
+  {{ .Content }}
+</content>
+</main>
+<p>
+  {{ range (.GetTerms "tags") }}
+    <a class="blog-tags" href="{{ .Permalink }}">#{{ .LinkTitle }}</a>&nbsp;&nbsp;
+  {{ end }}
+</p>
+<footer>
+</footer>
+{{ end }}

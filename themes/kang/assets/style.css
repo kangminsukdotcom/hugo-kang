@@ -1,0 +1,399 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+  color: #222;
+  background-color: rgb(255, 251, 230);
+}
+
+:lang(ko) {
+  word-break: keep-all;
+}
+
+:lang(en) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-variant-caps: small-caps;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 60ch;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.6;
+  --pagefind-ui-primary: #eeeeee;
+  --pagefind-ui-text: #eeeeee;
+  --pagefind-ui-background: #152028;
+  --pagefind-ui-border: #152028;
+  --pagefind-ui-tag: #152028;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+a:hover {
+  color: #E91E63;
+}
+
+ul.posts-list a:visited {
+  color: #8b6fcb;
+}
+
+.title {
+  text-decoration: none;
+  border: 0;
+}
+
+.title h1 {
+  font-size: 1.5em;
+  margin: 1.25em 0;
+}
+
+.title span {
+  font-weight: 400;
+}
+
+nav a {
+  margin-right: 0.625em;
+}
+
+nav {
+  text-align: center;
+}
+
+textarea {
+  background-color: #f5f5f5; /* Light background color */
+  color: #333; /* Darker font color for contrast */
+  width: 100%;
+  font-size: 1em;
+}
+
+input {
+  background-color: #f5f5f5; /* Light background color */
+  color: #333; /* Darker font color for contrast */
+  font-size: 1em;
+  font-family: system-ui, sans-serif;
+}
+
+content {
+  line-height: 1.6;
+  color: #333;
+  img {
+    display: block;
+    margin: 0 auto;
+    max-height: 400px;
+    image-rendering: pixelated;
+    }
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  border-color: #999; /* Updated border color for contrast */
+  padding: 0.3125em;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+code {
+  padding: 0.125em 0.3125em;
+  color: rgb(53, 53, 53); /* Updated code font color for contrast */
+  background-color: #f5f5f5; /* Light background color */
+  font-family: monospace;
+  font-size: 1.2rem !important;
+}
+
+pre code {
+  display: block;
+  padding: 1.25em;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  background-color: #f5f5f5; /* Light background color */
+  border: 1px solid #999; /* Updated border color for contrast */
+  border-radius: 4px; /* Added border radius */
+}
+
+blockquote {
+  border-left: 2px solid #FF3366; /* Updated border color for contrast */
+  color: #333; /* Darker font color for contrast */
+  padding-left: 1em;
+  margin-left: 0;
+}
+
+footer {
+  padding: 1.5625em;
+  text-align: center;
+  color: #666; /* Updated font color for contrast */
+}
+
+.helptext {
+  color: #777;
+  font-size: small;
+}
+
+.errorlist {
+  color: #cc3300; /* Updated error color for contrast */
+  font-size: small;
+}
+
+/* blog posts */
+ul.blog-posts {
+  list-style-type: none;
+  padding: unset;
+}
+
+ul.blog-posts li {
+  display: flex;
+  margin-bottom: 0.625em;
+}
+
+ul.blog-posts li span {
+  flex: 0 0 8.125em;
+}
+
+a.blog-tags {
+  line-height: 2;
+}
+
+h3.blog-filter {
+  margin-bottom: 0;
+}
+
+.disabled {
+  color: gray;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+hr {
+  border: none;
+}
+
+hr::before {
+  content: '---';
+  display: block;
+  text-align: center;
+}
+
+figure {
+  margin-inline-start: 0em;
+  margin-inline-end: 0em;
+}
+
+figcaption > p {
+  margin-block-start: 0px;
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+::selection {
+  color: #333; /* Updated selection font color */
+  background-color: #FFEB3B; /* Updated selection background color */
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.search-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #e0e0da; /* Harmonious background color */
+  color: #333; /* Harmonious font color */
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f5f5f5; /* Harmonious background color */
+  color: #333; /* Harmonious font color */
+  border: 1px solid #999; /* Border to match theme */
+  border-radius: 4px; /* Rounded corners */
+  font-family: system-ui, sans-serif;
+}
+
+#search-results {
+  margin-top: 20px;
+  max-height: calc(80vh - 100px);
+  overflow-y: auto;
+}
+
+.pagefind-ui__search-clear {
+  display: none;
+}
+
+@font-face {
+  font-family: 'LeeSeoyun';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.postcard-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.postcard {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  max-width: 600px;
+}
+
+.postcard img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s;
+  backface-visibility: hidden;
+}
+
+.postcard img.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+.back-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5; /* Light background color */
+}
+
+textarea#message {
+  width: 80%;
+  height: 200px;
+  resize: none;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'LeeSeoyun';
+}
+
+textarea#letter {
+  width: 100%;
+  height: 200px;
+  font-size: 16px;
+  font-family: 'LeeSeoyun';
+  background: rgba(255, 255, 255, 0.8);
+  color: #333333;
+}
+
+textarea#message:focus {
+  outline: none;
+}
+
+.intro {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.download-links {
+  margin-top: 20px;
+}
+
+/* Add this CSS to your main CSS file */
+.video-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: rgb(60, 66, 87);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px
+}
+
+main a:after {
+  content: " ⎘"
+}
+
+main {
+  background-color: #e6e6e6;
+  margin-bottom: 1em;
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow to give depth */
+border-radius: 4px; /* Slightly rounded corners for a softer look */
+}

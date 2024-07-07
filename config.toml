@@ -1,0 +1,36 @@
+baseURL = "https://kangminsuk.com/"
+title = "Kang"
+theme = "kang"
+enableRobotsTXT = true
+dateFormat = "2006-01-02"
+
+[markup]
+  [markup.highlight]
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  description = ""
+  favicon = "images/favicon.jpg"
+
+[languages]
+  [languages.en]
+    title = ""
+    languageName = "English"
+    LanguageCode = "en-US"
+    contentDir = "content"
+    [languages.en.params]
+      blogPath = "/blog"
+      titleImage = "/images/kang.jpg"
+  [languages.ko]
+    title = ""
+    languageName = "한국어"
+    LanguageCode = "ko-KO"
+    contentDir = "content.ko"
+    [languages.ko.params]
+      blogPath = "/ko/blog"
+      titleImage = "/images/kang2.jpg"

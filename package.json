@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "hugo": "^0.0.3"
+  },
+  "devDependencies": {
+    "@divriots/jampack": "^0.23.3"
+  }
+}
