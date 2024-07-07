@@ -2,7 +2,7 @@
 
 Simple, fast, and beautiful.
 
-This is a minimal Hugo theme called Kang.
+This is a minimal Hugo theme for writers.
 
 You can see the demo on [kangminsuk.com](https://kangminsuk.com).
 
